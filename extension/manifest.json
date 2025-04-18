@@ -1,0 +1,44 @@
+{
+    "name": "YouTube Delocaliser",
+    "description": "Replaces automatically translated YouTube video titles with the original.",
+    "version": "1.0",
+    "homepage_url": "https://github.com/danielniccoli/youtube-delocaliser",
+    "manifest_version": 2,
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "daniel.niccoli@gmail.com"
+        }
+    },
+    "icons": {
+        "32": "icons/translate-red.svg"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "identity",
+        "https://oauth2.googleapis.com/tokeninfo",
+        "https://www.googleapis.com/youtube/v3/videos",
+        "*://*.youtube.com/*"
+    ],
+    "browser_action": {
+        "default_area": "navbar",
+        "default_popup": "popup/popup.html"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "options_ui": {
+        "page": "options/options.html"
+    }
+}
