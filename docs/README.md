@@ -2,7 +2,6 @@ layout: page
 title: "README"
 permalink: /
 
-# Privacy Policy for YouTube Delocaliser (YTD)
 
 # Privacy Policy for YouTube Delocaliser (YTD)
 
